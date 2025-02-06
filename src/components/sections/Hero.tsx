@@ -4,9 +4,9 @@ import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="h-[calc(100svh-5rem)] py-5 flex items-center justify-center relative">
+    <div className="h-[calc(100svh-5rem)] mt-10 py-5 flex items-center justify-center relative overflow-hidden">
       <Image
-        alt="Radial gradiet"
+        alt="Radial gradient"
         src="/radial-shape-1.png"
         height={2000}
         width={2000}
