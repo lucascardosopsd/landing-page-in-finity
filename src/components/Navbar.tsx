@@ -31,12 +31,12 @@ const Navbar = () => {
         <Link href="#about">Quem Somos?</Link>
       </div>
 
-      <div className="flex relative h-10">
+      <div className="flex relative h-10 z-50">
         <Button className="bg-blue-900 text-red-500 rounded-none left-0 top-0 z-30 h-10 font-bold">
           Visitar blog
         </Button>
 
-        <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full">
+        <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full w-full">
           <InfiniteMovingCards items={items} />
         </div>
       </div>
