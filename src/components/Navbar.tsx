@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="h-20  text-background">
+    <div className="h-20 text-background">
       <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-between">
         <Image
           alt="logo"

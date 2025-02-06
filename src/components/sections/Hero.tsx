@@ -4,7 +4,15 @@ import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="h-[calc(100svh-5rem)] py-5 flex items-center justify-center">
+    <div className="h-[calc(100svh-5rem)] py-5 flex items-center justify-center relative">
+      <Image
+        alt="Radial gradiet"
+        src="/radial-shape-1.png"
+        height={2000}
+        width={2000}
+        className="absolute -right-[25%] -top-[25%] z-50 hidden tablet:block select-none pointer-events-none"
+      />
+
       <div className="mx-auto max-w-screen-desktop px-10">
         <div className="flex items-center text-4xl tablet:text-5xl">
           <div className="flex flex-col flex-1 justify-start text-background gap-4">
