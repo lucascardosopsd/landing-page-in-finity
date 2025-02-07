@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { HighlightWords } from "../HighlightWords";
 import WhyCard from "../WhyCard";
+import { useRef } from "react";
+import { useInView, motion } from "motion/react";
 
 const WhySection = () => {
   const cards = [
@@ -32,10 +36,11 @@ const WhySection = () => {
   ];
 
   return (
-    <div className="min-h-[calc(100svh)] flex items-center justify-center bg-blue-950 relative">
+    <div className="min-h-screen flex items-center justify-center bg-blue-950 relative">
       <div className="hidden tablet:block absolute top-0 left-0 h-40 bg-gradient-to-t from-transparent to-blue-950 z-20"></div>
 
       <div className="mx-auto max-w-screen-desktop tablet:px-10 relative">
+        {/* Imagem principal em dispositivos móveis */}
         <Image
           alt="megaphone"
           src="/megaphone.png"
@@ -54,13 +59,32 @@ const WhySection = () => {
               Por que Marketing?
             </HighlightWords>
 
-            {cards.map((card, idx) => (
-              <div className="sticky top-0" key={idx}>
-                <WhyCard title={card.title} description={card.description} />
-              </div>
-            ))}
+            {cards.map((card, idx) => {
+              const ref = useRef(null);
+              const isInView = useInView(ref, {
+                margin: "-40% 0% -40% 0%",
+              });
+
+              return (
+                <motion.div
+                  ref={ref}
+                  key={idx}
+                  initial={{ scale: 0.9, filter: "blur(2px)" }}
+                  animate={
+                    isInView
+                      ? { scale: 1, filter: "blur(0px)" }
+                      : { scale: 0.9, filter: "blur(2px)" }
+                  }
+                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  className="w-full"
+                >
+                  <WhyCard title={card.title} description={card.description} />
+                </motion.div>
+              );
+            })}
           </div>
 
+          {/* Imagens para tablets e desktops */}
           <div className="items-center justify-center flex-1 relative hidden tablet:flex">
             <Image
               alt="megaphone"
