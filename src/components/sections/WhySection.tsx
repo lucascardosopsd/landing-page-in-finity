@@ -47,7 +47,7 @@ const WhySection = () => {
             <HighlightWords
               words={["Marketing"]}
               highlightClassName="font-semibold text-red-500"
-              globalClassName="text-4xl z-20 p-5 w-full text-center tablet:text-start"
+              globalClassName="text-4xl z-20 p-5 w-full text-center"
             >
               Por que Marketing?
             </HighlightWords>
