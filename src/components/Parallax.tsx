@@ -8,20 +8,27 @@ type ParallaxProps = {
   offset?: number;
   className?: string;
   sizeOffset?: number;
+  parentRef: React.RefObject<HTMLDivElement>;
 };
 
-const Parallax = ({ children, className, offset = 0.1 }: ParallaxProps) => {
+const Parallax = ({
+  children,
+  className,
+  offset = 0.1,
+  sizeOffset,
+  parentRef,
+}: ParallaxProps) => {
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () => {
-    requestAnimationFrame(() => {
-      setOffsetY(window.scrollY);
-    });
+    if (parentRef.current) {
+      const parentTop = parentRef.current.getBoundingClientRect().top;
+      setOffsetY(-parentTop);
+    }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -31,7 +38,9 @@ const Parallax = ({ children, className, offset = 0.1 }: ParallaxProps) => {
       style={{
         position: "relative",
         top: `${offsetY * offset}px`,
-        transform: `scale(${(offsetY * offset) / 300})`,
+        ...(sizeOffset && {
+          transform: `scale(${1 + (offsetY * sizeOffset) / 3000})`,
+        }),
       }}
     >
       {children}
