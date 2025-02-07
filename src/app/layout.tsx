@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
+import LenisProvider from "@/components/providers/Lenis";
 import "./globals.css";
 
 const montserrat = Montserrat_Alternates({
@@ -19,7 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/lenis@1.1.20/dist/lenis.css"
+        />
+      </head>
+      <LenisProvider>
+        <body className={`${montserrat.className} antialiased`}>
+          {children}
+        </body>
+      </LenisProvider>
     </html>
   );
 }
