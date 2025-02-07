@@ -4,14 +4,8 @@ import { Button } from "../ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="h-[calc(100svh-5rem)] mt-10 py-5 flex items-center justify-center relative overflow-hidden">
-      <Image
-        alt="Radial gradient"
-        src="/radial-shape-1.png"
-        height={2000}
-        width={2000}
-        className="absolute -right-[25%] -top-[25%] z-50 hidden tablet:block select-none pointer-events-none"
-      />
+    <div className="h-[calc(100svh-5rem)] mt-10 py-5 flex items-center justify-center relative bg-blue-950">
+      <div className="hidden tablet:block bg-light-radial from-blue-100 via-transparent to-transparent h-[2000px] w-[2000px] absolute -right-[125%] -top-[150%] z-50" />
 
       <div className="mx-auto max-w-screen-desktop px-10">
         <div className="flex items-center text-4xl tablet:text-5xl">
@@ -24,7 +18,7 @@ const HeroSection = () => {
               Adaptamos os nossos recursos para atender às suas necessidades
             </HighlightWords>
 
-            <Button className="p-5 w-full bg-red-500 text-blue-950 font-bold text-xl tablet:text-2xl desktop:text-4xl uppercase">
+            <Button className="p-5 w-full bg-red-500 text-blue-950 hover:text-background font-bold text-xl tablet:text-2xl desktop:text-4xl uppercase">
               Mais informações
             </Button>
 

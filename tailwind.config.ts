@@ -12,6 +12,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "light-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
       keyframes: {
         scroll: {
           to: {
