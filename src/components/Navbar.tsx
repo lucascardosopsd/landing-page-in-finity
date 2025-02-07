@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 const Navbar = () => {
   const items = [
@@ -18,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="h-20 text-background bg-blue-950">
+    <div className={`${poppins.className} h-20 text-background bg-blue-950`}>
       <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-between">
         <Image
           alt="logo"
