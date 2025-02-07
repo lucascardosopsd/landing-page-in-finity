@@ -32,7 +32,9 @@ const WhySection = () => {
   ];
 
   return (
-    <div className="min-h-[calc(100svh)] py-5 flex items-center justify-center">
+    <div className="min-h-[calc(100svh)] flex items-center justify-center bg-blue-950 relative">
+      <div className="hidden tablet:block absolute top-0 left-0 h-40 bg-gradient-to-t from-transparent to-blue-950 z-20"></div>
+
       <div className="mx-auto max-w-screen-desktop tablet:px-10 relative">
         <Image
           alt="megaphone"
@@ -43,7 +45,7 @@ const WhySection = () => {
         />
 
         <div className="flex z-50">
-          <div className="flex flex-col flex-1 items-center justify-center tablet:gap-5 text-background">
+          <div className="flex flex-col flex-1 items-center justify-center tablet:gap-5 text-background py-5">
             <HighlightWords
               words={["Marketing"]}
               highlightClassName="font-semibold text-red-500"
@@ -65,7 +67,7 @@ const WhySection = () => {
               src="/megaphone.png"
               height={1000}
               width={1000}
-              className="w-full h-auto z-20 sticky top-0"
+              className="w-full h-auto z-20"
             />
 
             <Image
