@@ -4,6 +4,7 @@ import HeroSection from "@/components/sections/Hero";
 import WhySection from "@/components/sections/WhySection";
 import MaskSection from "@/components/sections/Mask";
 import AboutSection from "@/components/sections/About";
+import TeamSection from "@/components/sections/Team";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Citation />
       <MaskSection />
       <AboutSection />
+      <TeamSection />
     </div>
   );
 }
