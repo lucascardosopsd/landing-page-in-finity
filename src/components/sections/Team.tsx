@@ -101,7 +101,7 @@ const TeamSection = () => {
               transition={{ delay: 0.2 }}
             >
               <p className="text-6xl text-center z-20 mx-auto tablet:ml-0 font-bold">
-                Acontecer
+                Acontecer?
               </p>
             </motion.div>
           </div>
@@ -113,7 +113,7 @@ const TeamSection = () => {
           <div className="h-full w-32 bg-gradient-to-r from-red-500 to-transparent absolute top-0 left-0 z-20 pointer-events-none" />
           <div className="h-full w-32 bg-gradient-to-l from-red-500 to-transparent absolute top-0 right-0 z-20 pointer-events-none" />
 
-          <div className="grid grid-cols-1 tablet:grid-cols-3 desktop:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 tablet:grid-cols-3 desktop:grid-cols-4 gap-5 space-y-10 tablet:space-y-40">
             {team.map((data, idx) => (
               <div
                 className="flex justify-center tablet:justify-start relative"
