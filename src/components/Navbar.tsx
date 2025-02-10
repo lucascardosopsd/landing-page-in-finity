@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className={`${poppins.className} h-20 text-background bg-blue-950`}>
-      <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-between">
+      <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-between bg-blue-950">
         <Image
           alt="logo"
           src="/logo.png"

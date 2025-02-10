@@ -8,6 +8,7 @@ import TeamSection from "@/components/sections/Team";
 import ServicesSection from "@/components/sections/Services";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Navbar />
         <HeroSection />
       </div>
+      <Separator className="bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950" />
       <WhySection />
       <Citation />
       <MaskSection />
