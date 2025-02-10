@@ -19,6 +19,7 @@ const Citation = () => {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
+            className="block tablet:hidden"
           >
             As pessoas não sabem o que querem, até mostrarmos a elas.
           </motion.div>
