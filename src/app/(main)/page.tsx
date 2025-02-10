@@ -7,6 +7,7 @@ import AboutSection from "@/components/sections/About";
 import TeamSection from "@/components/sections/Team";
 import ServicesSection from "@/components/sections/Services";
 import ContactSection from "@/components/sections/ContactSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <TeamSection />
       <ServicesSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }
