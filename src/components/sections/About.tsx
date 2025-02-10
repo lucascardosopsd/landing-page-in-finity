@@ -13,7 +13,7 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
             className="w-full"
           >
-            <p className="text-xl text-red-500 w-full font-semibold text-start">
+            <p className="text-4xl text-red-500 w-full font-semibold text-start">
               Nossa História
             </p>
           </motion.div>
