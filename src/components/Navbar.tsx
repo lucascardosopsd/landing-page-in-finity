@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className={`${poppins.className} h-20 text-background bg-blue-950`}>
-      <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-between bg-blue-950">
+      <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-center tablet:justify-between bg-blue-950">
         <Image
           alt="logo"
           src="/logo.png"
@@ -34,7 +34,9 @@ const Navbar = () => {
           className="h-10 w-auto"
         />
 
-        <Link href="#about">Quem Somos?</Link>
+        <Link href="#about" className="hidden tablet:block">
+          Quem Somos?
+        </Link>
       </div>
 
       <div className="flex relative h-10 z-50">
