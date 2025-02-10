@@ -6,7 +6,7 @@ import TextTyping from "../TextTyping";
 
 const Citation = () => {
   return (
-    <div className="h-[40svh] tablet:h-40  w-full flex flex-col items-center justify-center bg-red-500 text-background p-10 sticky top-0 overflow-hidden">
+    <div className="h-[40svh] tablet:h-40  w-full flex flex-col items-center justify-center bg-red-500 text-background p-10 sticky top-0 overflow-hidden -z-[1]">
       <div className="relative">
         <p className="text-4xl font-bold absolute tablet:-left-5">"</p>
 
