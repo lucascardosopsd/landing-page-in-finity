@@ -82,10 +82,10 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className="min-h-svh flex items-center justify-center sticky top-0 bg-red-500 py-20">
-      <div className="mx-auto max-w-screen-desktop p-10 space-y-20 mb-[50svh]">
+    <div className="min-h-svh flex items-center justify-center bg-red-500 py-20">
+      <div className="mx-auto max-w-screen-desktop p-10 space-y-20">
         {/* Title */}
-        <div className="sticky top-0 z-40 bg-red-500">
+        <div className="sticky top-0 z-20 bg-red-500">
           <div className="relative flex flex-col items-start">
             <div className="h-32 w-full bg-gradient-to-b from-red-500 to-transparent absolute top-[100%] left-0 pointer-events-none" />
 
@@ -110,8 +110,8 @@ const TeamSection = () => {
         {/* Cards */}
         <div className="relative overflow-hidden">
           {/* Gradients */}
-          <div className="h-full w-32 bg-gradient-to-r from-red-500 to-transparent absolute top-0 left-0 z-20 pointer-events-none hidden tablet:block" />
-          <div className="h-full w-32 bg-gradient-to-l from-red-500 to-transparent absolute top-0 right-0 z-20 pointer-events-none hidden tablet:block" />
+          <div className="h-full w-32 bg-gradient-to-r from-red-500 to-transparent absolute top-0 left-0 z-10 pointer-events-none hidden tablet:block" />
+          <div className="h-full w-32 bg-gradient-to-l from-red-500 to-transparent absolute top-0 right-0 z-10 pointer-events-none hidden tablet:block" />
 
           <div className="grid grid-cols-1 tablet:grid-cols-3 gap-20">
             {team.map((data, idx) => (
