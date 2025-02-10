@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "@/components/providers/LenisScroll";
 
 const montserrat = Montserrat_Alternates({
   subsets: ["latin"],
@@ -26,7 +27,11 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <LenisProvider>
+        <body className={`${montserrat.className} antialiased`}>
+          {children}
+        </body>
+      </LenisProvider>
     </html>
   );
 }
