@@ -5,6 +5,7 @@ import WhySection from "@/components/sections/WhySection";
 import MaskSection from "@/components/sections/Mask";
 import AboutSection from "@/components/sections/About";
 import TeamSection from "@/components/sections/Team";
+import ServicesSection from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <MaskSection />
       <AboutSection />
       <TeamSection />
+      <ServicesSection />
     </div>
   );
 }

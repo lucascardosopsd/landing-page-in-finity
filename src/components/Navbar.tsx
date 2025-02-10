@@ -43,7 +43,13 @@ const Navbar = () => {
         </Button>
 
         <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full w-full">
-          <InfiniteMovingCards items={items} />
+          <InfiniteMovingCards
+            items={items.map((text, idx) => (
+              <p className="mx-4" key={idx}>
+                {text}
+              </p>
+            ))}
+          />
         </div>
       </div>
     </div>

@@ -83,7 +83,7 @@ const TeamSection = () => {
 
   return (
     <div className="min-h-svh flex items-center justify-center sticky top-0 bg-red-500 py-20">
-      <div className="mx-auto max-w-screen-desktop p-10 space-y-20">
+      <div className="mx-auto max-w-screen-desktop p-10 space-y-20 mb-[50svh]">
         {/* Title */}
         <div className="sticky top-0 z-40 bg-red-500">
           <div className="relative flex flex-col items-start">
