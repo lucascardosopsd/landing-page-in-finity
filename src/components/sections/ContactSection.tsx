@@ -23,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { toast } from "react-toastify";
 
 const ContactSection = () => {
   const form = useForm({
@@ -34,7 +35,13 @@ const ContactSection = () => {
     resolver: zodResolver(contactValidator),
   });
 
-  const handleSubmit = (data: z.infer<typeof contactValidator>) => {};
+  const handleSubmit = (data: z.infer<typeof contactValidator>) => {
+    try {
+    } catch (error) {
+      console.error(error);
+      toast.success("E-mail recebido! Entraremos em contato em breve.");
+    }
+  };
 
   return (
     <section className="bg-background h-full">
@@ -112,10 +119,10 @@ const ContactSection = () => {
 
               <FormField
                 control={form.control}
-                name="email"
+                name="target"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Interesse</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
