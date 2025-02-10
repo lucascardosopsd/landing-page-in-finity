@@ -30,8 +30,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="flex items-center justify-center bg-background overflow-hidden">
-      <div className="mx-auto max-w-screen-desktop relative w-full">
+    <section className="flex items-center justify-center bg-background overflow-hidden bg-red-500">
+      <div className="mx-auto relative w-full max-w-[1800px]">
         <div className="h-full w-32 absolute bg-gradient-to-r from-red-500 via-transparent to-transparent z-20" />
         <div className="h-full w-32 absolute right-0 bg-gradient-to-l from-red-500 via-transparent to-transparent z-20" />
 
