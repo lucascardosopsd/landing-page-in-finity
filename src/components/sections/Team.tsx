@@ -110,10 +110,10 @@ const TeamSection = () => {
         {/* Cards */}
         <div className="relative overflow-hidden">
           {/* Gradients */}
-          <div className="h-full w-32 bg-gradient-to-r from-red-500 to-transparent absolute top-0 left-0 z-20 pointer-events-none" />
-          <div className="h-full w-32 bg-gradient-to-l from-red-500 to-transparent absolute top-0 right-0 z-20 pointer-events-none" />
+          <div className="h-full w-32 bg-gradient-to-r from-red-500 to-transparent absolute top-0 left-0 z-20 pointer-events-none hidden tablet:block" />
+          <div className="h-full w-32 bg-gradient-to-l from-red-500 to-transparent absolute top-0 right-0 z-20 pointer-events-none hidden tablet:block" />
 
-          <div className="grid grid-cols-1 tablet:grid-cols-3 space-y-20 gap-5">
+          <div className="grid grid-cols-1 tablet:grid-cols-3 gap-20">
             {team.map((data, idx) => (
               <div
                 className="flex justify-center tablet:justify-start relative"
@@ -162,7 +162,7 @@ const TeamSection = () => {
                 </div>
 
                 {/* Desktop Titles */}
-                <div className="hidden tablet:flex flex-col justify-center items-end absolute w-full left-auto -right-14 top-0 bottom-auto">
+                <div className="hidden tablet:flex flex-col justify-center items-end absolute w-full left-auto -right-28 top-0 bottom-auto">
                   <motion.div
                     initial={{ x: 20 }}
                     whileInView={{ x: 0 }}
