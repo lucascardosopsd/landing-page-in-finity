@@ -27,12 +27,11 @@ export default function RootLayout({
           href="https://unpkg.com/lenis@1.1.20/dist/lenis.css"
         />
       </head>
-      <ToastContainer />
-      <LenisProvider>
-        <body className={`${montserrat.className} antialiased`}>
-          {children}
-        </body>
-      </LenisProvider>
+      <body className={`${montserrat.className} antialiased`}>
+        <LenisProvider>{children}</LenisProvider>
+
+        <ToastContainer />
+      </body>
     </html>
   );
 }
