@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/providers/LenisScroll";
+import { ToastContainer } from "react-toastify";
 
 const montserrat = Montserrat_Alternates({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({
           href="https://unpkg.com/lenis@1.1.20/dist/lenis.css"
         />
       </head>
-
+      <ToastContainer />
       <LenisProvider>
         <body className={`${montserrat.className} antialiased`}>
           {children}

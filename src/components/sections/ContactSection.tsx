@@ -24,6 +24,8 @@ import {
   SelectValue,
 } from "../ui/select";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { useState } from "react";
 
 const ContactSection = () => {
   const form = useForm({
@@ -35,11 +37,20 @@ const ContactSection = () => {
     resolver: zodResolver(contactValidator),
   });
 
-  const handleSubmit = (data: z.infer<typeof contactValidator>) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (data: z.infer<typeof contactValidator>) => {
     try {
+      setLoading(true);
+      await axios.post("/api/send-email", data);
+      toast.success("E-mail recebido! Entraremos em contato em breve.");
     } catch (error) {
       console.error(error);
-      toast.success("E-mail recebido! Entraremos em contato em breve.");
+      toast.error(
+        "Ocorreu um erro ao receber seu dados. Clique no botão 'Whatsapp' "
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -149,7 +160,11 @@ const ContactSection = () => {
                 )}
               />
 
-              <Button type="submit" className="w-full bg-blue-900">
+              <Button
+                type="submit"
+                className="w-full bg-blue-900"
+                disabled={loading}
+              >
                 Quero ser contactado
               </Button>
             </form>
