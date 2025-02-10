@@ -20,8 +20,12 @@ const ServicesSection = () => {
       image: "/copywriting.png",
     },
     {
-      title: "Web Dev",
+      title: "Site",
       image: "/web-dev.png",
+    },
+    {
+      title: "Fotografia",
+      image: "/pics.webp",
     },
   ];
 
