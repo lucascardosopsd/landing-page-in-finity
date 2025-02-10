@@ -14,6 +14,8 @@ export default function Home() {
   return (
     <div>
       <div className="overflow-hidden">
+        <div className="absolute w-full h-full bg-gradient-to-bl from-blue-100/25 via-transparent to-transparent z-50" />
+
         <Navbar />
         <HeroSection />
       </div>
