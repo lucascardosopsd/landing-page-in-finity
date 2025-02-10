@@ -75,7 +75,7 @@ const HeroSection = () => {
                 src="/man.png"
                 height={1000}
                 width={1000}
-                className="h-full w-auto max-h-[400px] tablet:max-h-[500px]"
+                className="h-full w-auto max-h-[400px] tablet:max-h-[500px] desktop:max-h-[700px]"
               />
             </motion.div>
           </div>
