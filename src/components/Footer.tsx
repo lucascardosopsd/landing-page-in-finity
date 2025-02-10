@@ -19,6 +19,7 @@ const Footer = () => {
             In-Finity - Pesquisa, Jornalismo e Marketing Luide Amorim Mendes
           </p>
           <p>CNPJ - 21.553.247/0001-05</p>
+          <p>Rua 13, 2502 - Centro, Jales-SP</p>
         </div>
       </div>
     </div>
