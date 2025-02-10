@@ -49,36 +49,6 @@ const TeamSection = () => {
       role: "Editor de Vídeo",
       image: "/man-team.png",
     },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
   ];
 
   return (
@@ -109,10 +79,6 @@ const TeamSection = () => {
 
         {/* Cards */}
         <div className="relative overflow-hidden">
-          {/* Gradients */}
-          <div className="h-full w-32 bg-gradient-to-r from-red-500 to-transparent absolute top-0 left-0 z-10 pointer-events-none hidden tablet:block" />
-          <div className="h-full w-32 bg-gradient-to-l from-red-500 to-transparent absolute top-0 right-0 z-10 pointer-events-none hidden tablet:block" />
-
           <div className="grid grid-cols-1 tablet:grid-cols-3 gap-20">
             {team.map((data, idx) => (
               <div
@@ -130,7 +96,7 @@ const TeamSection = () => {
                 />
 
                 {/* mobile Titles */}
-                <div className="flex tablet:hidden flex-col justify-center items-center absolute w-full bottom-0">
+                <div className="flex flex-col justify-center items-center absolute w-full bottom-0">
                   <motion.div
                     initial={{ x: 10 }}
                     whileInView={{ x: -10 }}
@@ -155,40 +121,6 @@ const TeamSection = () => {
                       repeat: Infinity,
                       repeatType: "mirror",
                       repeatDelay: 0,
-                    }}
-                  >
-                    <p className="text-lg text-background">{data.role}</p>
-                  </motion.div>
-                </div>
-
-                {/* Desktop Titles */}
-                <div className="hidden tablet:flex flex-col justify-center items-end absolute w-full left-auto -right-28 top-0 bottom-auto">
-                  <motion.div
-                    initial={{ x: 20 }}
-                    whileInView={{ x: 0 }}
-                    exit={{ x: 20 }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      repeatType: "mirror",
-                      type: "spring",
-                    }}
-                  >
-                    <p className="text-2xl text-background font-semibold">
-                      {data.name}
-                    </p>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ x: 20 }}
-                    whileInView={{ x: 0 }}
-                    exit={{ x: 20 }}
-                    transition={{
-                      delay: 0.2,
-                      duration: 4,
-                      repeat: Infinity,
-                      repeatType: "mirror",
-                      type: "spring",
                     }}
                   >
                     <p className="text-lg text-background">{data.role}</p>
