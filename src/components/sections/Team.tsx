@@ -83,14 +83,14 @@ const TeamSection = () => {
 
   return (
     <div className="min-h-svh flex items-center justify-center bg-red-500 py-20">
-      <div className="mx-auto max-w-screen-desktop p-10 space-y-20">
+      <div className="mx-auto max-w-screen-desktop p-10 space-y-20 overflow-hidden">
         {/* Title */}
         <div className="sticky top-0 z-20 bg-red-500">
-          <div className="relative flex flex-col items-start">
+          <div className="relative flex flex-col justify-center items-center tablet:items-start">
             <div className="h-32 w-full bg-gradient-to-b from-red-500 to-transparent absolute top-[100%] left-0 pointer-events-none" />
 
             <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }}>
-              <p className="text-6xl text-center z-20 mx-auto tablet:ml-0">
+              <p className="text-5xl text-center z-20 mx-auto tablet:ml-0">
                 Quem faz
               </p>
             </motion.div>
@@ -100,7 +100,7 @@ const TeamSection = () => {
               whileInView={{ x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <p className="text-6xl text-center z-20 mx-auto tablet:ml-0 font-bold">
+              <p className="text-5xl text-center z-20 mx-auto tablet:ml-0 font-bold">
                 Acontecer?
               </p>
             </motion.div>
