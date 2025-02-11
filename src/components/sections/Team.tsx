@@ -49,7 +49,7 @@ const TeamSection = ({ members }: TeamSectionProps) => {
                   src={member.image.url}
                   height={1000}
                   width={1000}
-                  className="h-[500px] w-auto"
+                  className="h-60 w-60 rounded-full border-4 border-background object-cover"
                 />
 
                 {/* mobile Titles */}
@@ -64,7 +64,7 @@ const TeamSection = ({ members }: TeamSectionProps) => {
                       repeatDelay: 0,
                     }}
                   >
-                    <p className="text-2xl text-background font-semibold">
+                    <p className="text-xl text-background font-semibold text-center">
                       {member.name}
                     </p>
                   </motion.div>
