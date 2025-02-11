@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { HighlightWords } from "../HighlightWords";
 import WhyCard from "../WhyCard";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useInView, motion, useAnimate } from "motion/react";
 import { WhyMarketingProps } from "@/types/cms";
 
@@ -13,20 +13,6 @@ type WhySectionProps = {
 
 const WhySection = ({ data }: WhySectionProps) => {
   const [imgScope, animateImg] = useAnimate();
-
-  useEffect(() => {
-    const runImgAnimation = async () => {
-      await animateImg(imgScope.current, { x: 100 });
-
-      await animateImg(
-        imgScope.current,
-        { transform: "scale(1.1)" },
-        { delay: 0.2, duration: 10 }
-      );
-    };
-
-    runImgAnimation();
-  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-950 relative">
@@ -49,11 +35,11 @@ const WhySection = ({ data }: WhySectionProps) => {
         </motion.div>
 
         <div className="flex z-50">
-          <div className="flex flex-col flex-1 items-center justify-center tablet:gap-5 text-background py-5">
+          <div className="flex flex-col flex-1 items-center justify-center tablet:gap-5 text-background py-5 ">
             <HighlightWords
               words={["Marketing"]}
               highlightClassName="font-semibold text-red-500"
-              globalClassName="text-4xl z-20 p-5 w-full text-center"
+              globalClassName="text-4xl z-20 p-5 w-full text-center sticky top-0 bg-gradient-to-t from-transparent via-blue-950 to-blue-950"
             >
               Por que Marketing?
             </HighlightWords>
@@ -84,8 +70,14 @@ const WhySection = ({ data }: WhySectionProps) => {
           </div>
 
           {/* Imagens para tablets e desktops */}
-          <div className="items-center justify-center flex-1 relative hidden tablet:flex">
-            <div className="z-20" ref={imgScope}>
+          <div className="items-center justify-end flex-1 relative hidden tablet:flex">
+            <motion.div
+              initial={{ scale: 1 }}
+              whileInView={{ scale: 1.2 }}
+              transition={{ duration: 10 }}
+              className="z-20"
+              ref={imgScope}
+            >
               <Image
                 alt="megaphone"
                 src="/megaphone.png"
@@ -93,14 +85,14 @@ const WhySection = ({ data }: WhySectionProps) => {
                 width={1000}
                 className="w-full h-auto"
               />
-            </div>
+            </motion.div>
 
             <Image
               alt="shape-1"
               src="/shape-01.svg"
-              height={2000}
-              width={2000}
-              className="absolute h-full w-full bottom-0 right-0 antialiased"
+              height={1000}
+              width={1000}
+              className="absolute h-full w-full bottom-0 right-0 antialiased  object-cover"
             />
           </div>
         </div>
