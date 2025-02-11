@@ -1,3 +1,4 @@
+import { genSlug } from "@/utils/genSlug";
 import type { CollectionConfig } from "payload";
 
 export const Media: CollectionConfig = {
@@ -13,4 +14,14 @@ export const Media: CollectionConfig = {
     },
   ],
   upload: true,
+  hooks: {
+    beforeValidate: [
+      ({ data, req }) => {
+        if (req.file) {
+          req.file.name = genSlug(req.file.name);
+        }
+        return data;
+      },
+    ],
+  },
 };
