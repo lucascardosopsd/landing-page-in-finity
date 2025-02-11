@@ -4,17 +4,15 @@ import HeroSection from "@/components/sections/Hero";
 import WhySection from "@/components/sections/WhySection";
 import MaskSection from "@/components/sections/Mask";
 import AboutSection from "@/components/sections/About";
-import TeamSection from "@/components/sections/Team";
-import ServicesSection from "@/components/sections/Services";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 import { Separator } from "@/components/ui/separator";
-import { getMembersData } from "../../../actions/getMembers";
-import { getServicesData } from "@/actions/getServices";
+import { getLandingPage } from "@/actions/getLandingPage";
+import TeamSection from "@/components/sections/Team";
+import ServicesSection from "@/components/sections/Services";
 
 export default async function Home() {
-  const members = await getMembersData();
-  const services = await getServicesData();
+  const data = await getLandingPage();
 
   return (
     <div>
@@ -29,8 +27,8 @@ export default async function Home() {
       <Citation />
       <MaskSection />
       <AboutSection />
-      <TeamSection members={members.docs} />
-      <ServicesSection services={services.docs} />
+      <TeamSection members={data.members} />
+      <ServicesSection services={data.services} />
       <ContactSection />
       <Footer />
     </div>

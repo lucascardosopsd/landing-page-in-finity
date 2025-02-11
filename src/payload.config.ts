@@ -7,15 +7,15 @@ import { fileURLToPath } from "url";
 import sharp from "sharp";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 import { pt } from "@payloadcms/translations/languages/pt";
-import { Members } from "./app/(payload)/collections/Members";
 import { Media } from "./app/(payload)/collections/Media";
-import { Services } from "./app/(payload)/collections/Services";
+import { LandingPage } from "./app/(payload)/collections/LandingPage";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
-  collections: [Members, Media, Services],
+  globals: [LandingPage],
+  collections: [Media],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

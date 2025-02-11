@@ -49,7 +49,7 @@ const TeamSection = ({ members }: TeamSectionProps) => {
                   src={member.image.url}
                   height={1000}
                   width={1000}
-                  className="h-full w-[400px]"
+                  className="h-[500px] w-auto"
                 />
 
                 {/* mobile Titles */}
