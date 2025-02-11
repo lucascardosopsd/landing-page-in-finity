@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { HighlightWords } from "../HighlightWords";
 import WhyCard from "../WhyCard";
-import { useRef } from "react";
-import { useInView, motion } from "motion/react";
+import { useEffect, useRef } from "react";
+import { useInView, motion, useAnimate } from "motion/react";
 
 const WhySection = () => {
   const cards = [
@@ -35,19 +35,41 @@ const WhySection = () => {
     },
   ];
 
+  const [imgScope, animateImg] = useAnimate();
+
+  useEffect(() => {
+    const runImgAnimation = async () => {
+      await animateImg(imgScope.current, { x: 100 });
+
+      await animateImg(
+        imgScope.current,
+        { transform: "scale(1.1)" },
+        { delay: 0.2, duration: 10 }
+      );
+    };
+
+    runImgAnimation();
+  }, []);
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-950 relative">
       <div className="hidden tablet:block absolute top-0 left-0 h-40 bg-gradient-to-t from-transparent to-blue-950 z-20"></div>
 
       <div className="mx-auto max-w-screen-desktop tablet:px-10 relative">
         {/* Imagem principal em dispositivos móveis */}
-        <Image
-          alt="megaphone"
-          src="/megaphone.png"
-          height={1000}
-          width={1000}
-          className="w-80 h-auto z-20 block tablet:hidden mx-auto"
-        />
+        <motion.div
+          initial={{ y: 50 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            alt="megaphone"
+            src="/megaphone.png"
+            height={1000}
+            width={1000}
+            className="w-80 h-auto z-20 block tablet:hidden mx-auto"
+          />
+        </motion.div>
 
         <div className="flex z-50">
           <div className="flex flex-col flex-1 items-center justify-center tablet:gap-5 text-background py-5">
@@ -86,13 +108,15 @@ const WhySection = () => {
 
           {/* Imagens para tablets e desktops */}
           <div className="items-center justify-center flex-1 relative hidden tablet:flex">
-            <Image
-              alt="megaphone"
-              src="/megaphone.png"
-              height={1000}
-              width={1000}
-              className="w-full h-auto z-20"
-            />
+            <div className="z-20" ref={imgScope}>
+              <Image
+                alt="megaphone"
+                src="/megaphone.png"
+                height={1000}
+                width={1000}
+                className="w-full h-auto"
+              />
+            </div>
 
             <Image
               alt="shape-1"
