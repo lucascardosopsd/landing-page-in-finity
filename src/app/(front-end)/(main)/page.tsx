@@ -9,8 +9,11 @@ import ServicesSection from "@/components/sections/Services";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 import { Separator } from "@/components/ui/separator";
+import { getMembersData } from "../../../actions/getMembers";
 
-export default function Home() {
+export default async function Home() {
+  console.log(await getMembersData());
+
   return (
     <div>
       <div className="overflow-hidden">

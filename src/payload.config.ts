@@ -6,7 +6,7 @@ import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
 import { Media } from "./app/(payload)/collections/Media";
-import { Team } from "./app/(payload)/collections/Team";
+import { Members } from "./app/(payload)/collections/Members";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 import { pt } from "@payloadcms/translations/languages/pt";
 
@@ -14,7 +14,7 @@ const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
-  collections: [Team, Media],
+  collections: [Members, Media],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
