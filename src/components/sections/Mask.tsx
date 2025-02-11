@@ -11,7 +11,7 @@ const MaskSection = () => {
 
   return (
     <section
-      className="h-[200svh] py-5 flex items-center justify-center relative bg-background overflow-clip bg-blue-950"
+      className="tablet:h-[200svh] py-5 flex items-center justify-center relative bg-background overflow-clip bg-blue-950"
       ref={sectionRef}
     >
       <div className="mx-auto max-w-screen-desktop px-10 relative mb-40">
