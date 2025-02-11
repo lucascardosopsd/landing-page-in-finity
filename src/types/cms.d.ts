@@ -16,3 +16,8 @@ export type WhyMarketingProps = {
   title: string;
   description: string;
 };
+
+export type NewsProps = {
+  id: string;
+  title: string;
+};

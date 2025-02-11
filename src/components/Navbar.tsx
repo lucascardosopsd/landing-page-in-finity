@@ -3,26 +3,18 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { Poppins } from "next/font/google";
+import { NewsProps } from "@/types/cms";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const Navbar = () => {
-  const items = [
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-    "Notícia - Acontecimento xyz",
-  ];
+type NavbarProps = {
+  news: NewsProps[];
+};
 
+const Navbar = ({ news }: NavbarProps) => {
   return (
     <div className={`${poppins.className} h-20 text-background bg-blue-950`}>
       <div className="mx-auto max-w-screen-desktop p-5 px-10 tablet:px-20 flex items-center justify-center tablet:justify-between bg-blue-950">
@@ -46,9 +38,11 @@ const Navbar = () => {
 
         <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full w-full">
           <InfiniteMovingCards
-            items={items.map((text, idx) => (
+            className="w-full"
+            fade={true}
+            items={news.map((data, idx) => (
               <p className="mx-4" key={idx}>
-                {text}
+                {data.title}
               </p>
             ))}
           />

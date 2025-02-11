@@ -1,10 +1,16 @@
 import { payload } from "@/lib/payload";
-import { MemberProps, ServiceProps, WhyMarketingProps } from "@/types/cms";
+import {
+  MemberProps,
+  NewsProps,
+  ServiceProps,
+  WhyMarketingProps,
+} from "@/types/cms";
 
 type LandingPageProps = {
   services: ServiceProps[];
   members: MemberProps[];
   whyMarketing: WhyMarketingProps[];
+  news: NewsProps[];
 };
 
 export const getLandingPage = async (): Promise<LandingPageProps> => {

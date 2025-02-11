@@ -5,6 +5,28 @@ export const LandingPage: GlobalConfig = {
   label: "Landing Page",
   fields: [
     {
+      name: "news",
+      label: "Notícias",
+      type: "array",
+      fields: [
+        {
+          name: "title",
+          type: "text",
+          label: "Título",
+        },
+        {
+          name: "url",
+          label: "Link",
+          type: "text",
+          validate: (value: any) => {
+            const urlRegex =
+              /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+            return urlRegex.test(value) ? true : "Invalid URL format";
+          },
+        },
+      ],
+    },
+    {
       name: "services",
       label: "Serviços",
       type: "array",

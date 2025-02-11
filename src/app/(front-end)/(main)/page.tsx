@@ -14,14 +14,12 @@ import ServicesSection from "@/components/sections/Services";
 export default async function Home() {
   const data = await getLandingPage();
 
-  console.log(data);
-
   return (
     <div>
       <div className="overflow-hidden">
         <div className="absolute w-full h-full bg-gradient-to-bl from-blue-100/25 via-transparent to-transparent z-50" />
 
-        <Navbar />
+        <Navbar news={data.news} />
         <HeroSection />
       </div>
       <Separator className="bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950" />
