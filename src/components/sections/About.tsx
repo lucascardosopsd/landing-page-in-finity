@@ -1,8 +1,10 @@
 "use client";
 
+import { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical";
+import { RichText } from "@payloadcms/richtext-lexical/react";
 import { motion } from "motion/react";
 
-const AboutSection = () => {
+const AboutSection = ({ textData }: { textData: SerializedEditorState }) => {
   return (
     <section
       className="min-h-svh bg-background flex items-center justify-center py-10"
@@ -26,39 +28,9 @@ const AboutSection = () => {
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="w-full overflow-clip"
+          className="w-full overflow-clip pt-5"
         >
-          <div className="space-y-5 p-2 tablet:p-5">
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet. Ut nihil mollitia ut alias dolorem vel
-              explicabo praesentium qui reprehenderit possimus. Ad galisum dolor
-              hic ipsam aliquam aut totam tenetur.
-            </p>
-
-            <p className="text-justify">
-              Cum alias mollitia sit dolorum placeat aut ipsam nihil ut omnis
-              modi. Eum eaque perspiciatis vel unde officia qui aliquam tempora
-              quo alias nesciunt aut molestiae vero vel error sequi in rerum
-              atque.
-            </p>
-
-            <p className="text-justify">
-              Est maxime doloribus quo commodi molestias ad suscipit repellat ut
-              itaque perspiciatis rem iste eaque eum sapiente minus ut atque
-              sunt. Cum alias mollitia sit dolorum placeat aut ipsam nihil ut
-              omnis modi.
-            </p>
-
-            <p className="text-justify">
-              Eum eaque perspiciatis vel unde officia qui aliquam tempora quo
-              alias nesciunt aut molestiae vero vel error sequi in rerum atque.
-              Est maxime doloribus quo commodi molestias ad suscipit repellat ut
-              itaque perspiciatis rem iste eaque eum sapiente minus ut atque
-              sunt. Rem perferendis praesentium rem omnis odit nam aliquam
-              voluptatem ad suscipit corrupti nam recusandae veritatis. Id
-              voluptatem explicabo est omnis suscipit ut repellendus sunt?
-            </p>
-          </div>
+          <RichText data={textData} />
         </motion.div>
       </div>
     </section>

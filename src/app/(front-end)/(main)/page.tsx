@@ -26,7 +26,7 @@ export default async function Home() {
       <WhySection data={data.whyMarketing} />
       <Citation />
       <MaskSection />
-      <AboutSection />
+      <AboutSection textData={data.history} />
       <TeamSection members={data.members} />
       <ServicesSection services={data.services} />
       <ContactSection />

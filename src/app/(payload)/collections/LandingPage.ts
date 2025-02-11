@@ -1,3 +1,4 @@
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { GlobalConfig } from "payload";
 
 export const LandingPage: GlobalConfig = {
@@ -44,6 +45,12 @@ export const LandingPage: GlobalConfig = {
           type: "text",
         },
       ],
+    },
+    {
+      name: "history",
+      label: "História",
+      type: "richText",
+      editor: lexicalEditor({}),
     },
     {
       name: "members",

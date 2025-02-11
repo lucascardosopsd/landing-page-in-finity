@@ -1,4 +1,5 @@
 import { payload } from "@/lib/payload";
+import { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical";
 import {
   MemberProps,
   NewsProps,
@@ -11,6 +12,7 @@ type LandingPageProps = {
   members: MemberProps[];
   whyMarketing: WhyMarketingProps[];
   news: NewsProps[];
+  history: SerializedEditorState;
 };
 
 export const getLandingPage = async (): Promise<LandingPageProps> => {

@@ -12,7 +12,7 @@
     "@hookform/resolvers": "^4.0.0",
     "@payloadcms/db-mongodb": "^3.22.0",
     "@payloadcms/next": "^3.22.0",
-    "@payloadcms/richtext-lexical": "^3.22.0",
+    "@payloadcms/richtext-lexical": "3.22.0",
     "@payloadcms/storage-uploadthing": "^3.22.0",
     "@radix-ui/react-label": "^2.1.2",
     "@radix-ui/react-select": "^2.1.6",
