@@ -5,36 +5,13 @@ import { HighlightWords } from "../HighlightWords";
 import WhyCard from "../WhyCard";
 import { useEffect, useRef } from "react";
 import { useInView, motion, useAnimate } from "motion/react";
+import { WhyMarketingProps } from "@/types/cms";
 
-const WhySection = () => {
-  const cards = [
-    {
-      title: "Visibilidade",
-      description:
-        "O marketing ajuda a tornar a empresa conhecida pelo público, construindo uma identidade forte e uma presença de mercado.",
-    },
-    {
-      title: "Fidelização",
-      description:
-        "Através de estratégias como marketing de conteúdo e e-mail marketing, é possível atrair novos clientes e manter um relacionamento duradouro com os atuais, aumentando a retenção e fidelização.",
-    },
-    {
-      title: "Diferenciação",
-      description:
-        "O marketing permite destacar os diferenciais da empresa, seja através de um posicionamento único, branding forte ou comunicação eficiente, ajudando a se destacar no mercado competitivo.",
-    },
-    {
-      title: "Venda",
-      description:
-        "Com um bom planejamento de marketing, é possível criar campanhas eficazes que convertem leads em clientes, impulsionando as vendas e, consequentemente, o faturamento da empresa.",
-    },
-    {
-      title: "Mercado",
-      description:
-        "O marketing permite acompanhar e se adaptar às mudanças do mercado, comportamento do consumidor e novas tecnologias, garantindo que a empresa se mantenha relevante e competitiva.",
-    },
-  ];
+type WhySectionProps = {
+  data: WhyMarketingProps[];
+};
 
+const WhySection = ({ data }: WhySectionProps) => {
   const [imgScope, animateImg] = useAnimate();
 
   useEffect(() => {
@@ -81,7 +58,7 @@ const WhySection = () => {
               Por que Marketing?
             </HighlightWords>
 
-            {cards.map((card, idx) => {
+            {data.map((card, idx) => {
               const ref = useRef(null);
               const isInView = useInView(ref, {
                 margin: "-40% 0% -40% 0%",

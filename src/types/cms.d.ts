@@ -10,3 +10,9 @@ export type ServiceProps = {
   image: Media;
   title: string;
 };
+
+export type WhyMarketingProps = {
+  id: string;
+  title: string;
+  description: string;
+};

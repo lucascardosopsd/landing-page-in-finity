@@ -47,5 +47,22 @@ export const LandingPage: GlobalConfig = {
         },
       ],
     },
+    {
+      name: "whyMarketing",
+      label: "Porquê Marketing",
+      type: "array",
+      fields: [
+        {
+          name: "title",
+          type: "text",
+          label: "Título",
+        },
+        {
+          name: "description",
+          type: "text",
+          label: "Descrição",
+        },
+      ],
+    },
   ],
 };
