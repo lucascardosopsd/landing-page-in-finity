@@ -4,3 +4,9 @@ export type MemberProps = {
   name: string;
   role: string;
 };
+
+export type ServiceProps = {
+  id: string;
+  image: Media;
+  title: string;
+};
