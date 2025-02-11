@@ -12,7 +12,7 @@ import { Separator } from "@/components/ui/separator";
 import { getMembersData } from "../../../actions/getMembers";
 
 export default async function Home() {
-  console.log(await getMembersData());
+  const members = await getMembersData();
 
   return (
     <div>
@@ -27,7 +27,7 @@ export default async function Home() {
       <Citation />
       <MaskSection />
       <AboutSection />
-      <TeamSection />
+      <TeamSection members={members.docs} />
       <ServicesSection />
       <ContactSection />
       <Footer />

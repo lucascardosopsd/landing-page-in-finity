@@ -1,7 +1,7 @@
 import { CollectionConfig } from "payload";
 
 export const Members: CollectionConfig = {
-  slug: "member",
+  slug: "members",
   labels: {
     plural: "Colaboradores",
     singular: "Colaborador",
@@ -17,6 +17,11 @@ export const Members: CollectionConfig = {
     {
       name: "name",
       label: "Nome",
+      type: "text",
+    },
+    {
+      name: "role",
+      label: "Cargo",
       type: "text",
     },
   ],

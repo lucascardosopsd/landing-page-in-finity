@@ -1,59 +1,16 @@
 "use client";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { MemberProps } from "@/types/cms";
 
-const TeamSection = () => {
-  const team = [
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-    {
-      name: "Marcos Oliveira",
-      role: "Editor de Vídeo",
-      image: "/man-team.png",
-    },
-  ];
+type TeamSectionProps = {
+  members: MemberProps[];
+};
 
+const TeamSection = ({ members }: TeamSectionProps) => {
   return (
     <div className="min-h-svh flex items-center justify-center bg-red-500 py-20">
-      <div className="mx-auto max-w-screen-desktop p-10 space-y-20 overflow-hidden">
+      <div className="mx-auto max-w-screen-desktop p-10 space-y-20">
         {/* Title */}
         <div className="sticky top-0 z-20 bg-red-500">
           <div className="relative flex flex-col justify-center items-center tablet:items-start">
@@ -80,7 +37,7 @@ const TeamSection = () => {
         {/* Cards */}
         <div className="relative overflow-hidden">
           <div className="grid grid-cols-1 tablet:grid-cols-3 gap-20">
-            {team.map((data, idx) => (
+            {members.map((member, idx) => (
               <div
                 className="flex justify-center tablet:justify-start relative"
                 key={idx}
@@ -89,7 +46,7 @@ const TeamSection = () => {
 
                 <Image
                   alt="employee"
-                  src={data.image}
+                  src={member.image.url}
                   height={1000}
                   width={1000}
                   className="h-full w-[400px]"
@@ -108,7 +65,7 @@ const TeamSection = () => {
                     }}
                   >
                     <p className="text-2xl text-background font-semibold">
-                      {data.name}
+                      {member.name}
                     </p>
                   </motion.div>
 
@@ -123,7 +80,7 @@ const TeamSection = () => {
                       repeatDelay: 0,
                     }}
                   >
-                    <p className="text-lg text-background">{data.role}</p>
+                    <p className="text-lg text-background">{member.role}</p>
                   </motion.div>
                 </div>
               </div>
