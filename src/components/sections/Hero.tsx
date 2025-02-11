@@ -61,7 +61,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="absolute bottom-0 z-40 "
             >
-              <p className="text-background text-base">Luide Amorin - CEO</p>
+              <p className="text-background text-base">Luide Mendes - CEO</p>
             </motion.div>
 
             <div className="h-full w-full max-h-[400px] bg-gradient-to-t from-blue-950 to-transparent z-20 absolute bottom-0 left-0" />
@@ -72,7 +72,7 @@ const HeroSection = () => {
             >
               <Image
                 alt="man"
-                src="/man.png"
+                src="/luide-site.png"
                 height={1000}
                 width={1000}
                 className="h-full w-auto max-h-[70svh]"
