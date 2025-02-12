@@ -133,25 +133,25 @@ const ContactSection = () => {
                 name="target"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Interesse</FormLabel>
+                    <FormLabel>Qual o tamanho da sua empresa?</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Qual é seu interesse?" />
+                          <SelectValue placeholder="Selecione uma opção" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="Marketing">Marketing</SelectItem>
-                        <SelectItem value="Tráfego">Tráfego</SelectItem>
-                        <SelectItem value="Consultoria">Consultoria</SelectItem>
-                        <SelectItem value="Design">Design</SelectItem>
-                        <SelectItem value="Site">Site</SelectItem>
-                        <SelectItem value="Copywriting">Copywriting</SelectItem>
-                        <SelectItem value="Fotografia">
-                          Fotografia de Produto
+                        <SelectItem value="Empresa Pequena">
+                          Pequena (1-9)
+                        </SelectItem>
+                        <SelectItem value="Empresa Média">
+                          Média (10-49)
+                        </SelectItem>
+                        <SelectItem value="Empresa Grande">
+                          Grande (+50)
                         </SelectItem>
                       </SelectContent>
                     </Select>
