@@ -26,15 +26,17 @@ const Navbar = ({ news }: NavbarProps) => {
           className="h-8 w-auto"
         />
 
-        <Link href="#about" className="hidden tablet:block">
+        <Link href="#about" className="hidden tablet:block z-50">
           Quem Somos?
         </Link>
       </div>
 
       <div className="flex relative h-10 z-50">
-        <Button className="bg-blue-900 text-red-500 rounded-none left-0 top-0 z-30 h-10 font-bold">
-          Visitar blog
-        </Button>
+        <Link href="https://in-finitynews.com/" target="_blank">
+          <Button className="bg-blue-900 text-red-500 rounded-none left-0 top-0 z-30 h-10 font-bold">
+            Visitar blog
+          </Button>
+        </Link>
 
         <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full w-full">
           <InfiniteMovingCards
