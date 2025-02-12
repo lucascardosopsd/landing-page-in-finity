@@ -38,14 +38,16 @@ const Navbar = ({ news }: NavbarProps) => {
           </Button>
         </Link>
 
-        <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full w-full">
+        <div className="flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden bg-red-500 h-full w-full z-50">
           <InfiniteMovingCards
             className="w-full"
             fade={true}
             items={news.map((data, idx) => (
-              <p className="mx-4" key={idx}>
-                {data.title}
-              </p>
+              <Link href={data.url} target="_blank">
+                <p className="mx-4" key={idx}>
+                  {data.title}
+                </p>
+              </Link>
             ))}
           />
         </div>
