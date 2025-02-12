@@ -1,4 +1,5 @@
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { revalidatePath } from "next/cache";
 import { GlobalConfig } from "payload";
 
 export const LandingPage: GlobalConfig = {
@@ -94,4 +95,11 @@ export const LandingPage: GlobalConfig = {
       ],
     },
   ],
+  hooks: {
+    afterChange: [
+      () => {
+        revalidatePath("/");
+      },
+    ],
+  },
 };
