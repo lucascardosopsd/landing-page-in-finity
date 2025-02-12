@@ -23,7 +23,7 @@ const Navbar = ({ news }: NavbarProps) => {
           src="/logo.png"
           height={500}
           width={500}
-          className="h-10 w-auto"
+          className="h-8 w-auto"
         />
 
         <Link href="#about" className="hidden tablet:block">

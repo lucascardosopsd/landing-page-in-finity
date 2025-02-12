@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 
 const HeroSection = () => {
   return (
-    <div className="h-[calc(100svh-5rem)] mt-10 py-5 flex items-center justify-center relative bg-blue-950">
+    <div className="h-[calc(100svh-5rem)] py-5 flex items-center justify-center relative bg-blue-950">
       <div className="hidden tablet:block bg-light-radial from-blue-100 via-transparent to-transparent h-[2000px] w-[2000px] absolute -right-[125%] -top-[150%] z-50" />
 
       <div className="mx-auto max-w-screen-desktop px-10">
