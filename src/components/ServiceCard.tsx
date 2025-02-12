@@ -7,7 +7,7 @@ type ServiceCardProps = {
 
 const ServiceCard = ({ title, image }: ServiceCardProps) => {
   return (
-    <div className="h-80 w-52 flex items-end bg-blue-500 relative">
+    <div className="h-80 w-52 flex items-end bg-red-500 relative">
       <div className="h-full w-full absolute bg-gradient-to-t from-red-500 to-transparent mix-blend-hue" />
       <div className="h-full w-full absolute bg-gradient-to-t from-black/50 to-transparente" />
       <div className="h-[50%] w-full absolute bg-gradient-to-t from-red-500 to-transparent" />
