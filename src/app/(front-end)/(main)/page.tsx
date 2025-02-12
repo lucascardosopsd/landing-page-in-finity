@@ -10,9 +10,11 @@ import { Separator } from "@/components/ui/separator";
 import { getLandingPage } from "@/actions/getLandingPage";
 import TeamSection from "@/components/sections/Team";
 import ServicesSection from "@/components/sections/Services";
+import { revalidatePath } from "next/cache";
 
 export default async function Home() {
   const data = await getLandingPage();
+  revalidatePath("/");
 
   return (
     <div>
