@@ -45,6 +45,7 @@ const TeamSection = ({ members }: TeamSectionProps) => {
                 <div className="h-32 w-full bg-gradient-to-t from-red-500 to-transparent absolute bottom-0 left-0" />
 
                 <Image
+                  priority
                   alt="employee"
                   src={member.image.url}
                   height={1000}

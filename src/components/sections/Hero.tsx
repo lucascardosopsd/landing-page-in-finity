@@ -79,6 +79,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
             >
               <Image
+                priority
                 alt="luide Amorin"
                 src="/luide-site.png"
                 height={1000}

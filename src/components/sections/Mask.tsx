@@ -26,6 +26,7 @@ const MaskSection = () => {
           parentRef={sectionRef}
         >
           <Image
+            priority
             alt="mask"
             src="/mask.png"
             height={1000}

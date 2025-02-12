@@ -26,6 +26,7 @@ const WhySection = ({ data }: WhySectionProps) => {
           transition={{ duration: 0.5 }}
         >
           <Image
+            priority
             alt="megaphone"
             src="/megaphone.png"
             height={1000}
