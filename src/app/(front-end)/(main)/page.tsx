@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { getLandingPage } from "@/actions/getLandingPage";
 import TeamSection from "@/components/sections/Team";
 import ServicesSection from "@/components/sections/Services";
+import CurriculumSection from "@/components/sections/Curriculum";
 
 export default async function Home() {
   const data = await getLandingPage();
@@ -22,6 +23,7 @@ export default async function Home() {
         <Navbar news={data.news} />
         <HeroSection />
       </div>
+      <CurriculumSection />
       <Separator className="bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950" />
       <WhySection data={data.whyMarketing} />
       <Citation />
