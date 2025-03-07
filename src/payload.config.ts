@@ -9,13 +9,15 @@ import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 import { pt } from "@payloadcms/translations/languages/pt";
 import { Media } from "./app/(payload)/collections/Media";
 import { LandingPage } from "./app/(payload)/collections/LandingPage";
+import { Jobs } from "./app/(payload)/collections/Jobs";
+import { Companies } from "./app/(payload)/collections/Company";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
   globals: [LandingPage],
-  collections: [Media],
+  collections: [Jobs, Companies, Media],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
