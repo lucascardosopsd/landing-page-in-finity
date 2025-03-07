@@ -15,8 +15,16 @@ export const Jobs: CollectionConfig = {
     },
     {
       name: "company",
+      label: "Empresa",
       type: "relationship",
       relationTo: "companies",
+      admin: {
+        components: {
+          Field: {
+            path: "@/components/payloadCMS/CompanyLabel",
+          },
+        },
+      },
     },
 
     {

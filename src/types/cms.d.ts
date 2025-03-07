@@ -1,3 +1,5 @@
+import { Media } from "payload/generated-types";
+
 export type MemberProps = {
   id: string;
   image: Media;
@@ -21,4 +23,23 @@ export type NewsProps = {
   id: string;
   title: string;
   url: string;
+};
+
+export type Job = {
+  id: string;
+  role: string;
+  company?: Company;
+  description?: string;
+  active: boolean;
+};
+
+export type Company = {
+  id: string;
+  logo: Media;
+  name: string;
+  email: string;
+  legalName: string;
+  cnpj: string;
+  address: string;
+  activityArea: string;
 };

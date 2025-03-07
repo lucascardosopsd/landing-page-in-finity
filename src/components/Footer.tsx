@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="min-h-40 w-full bg-blue-950 flex items-center justify-center">
+    <div className="h-52 tablet:h-40 w-full bg-blue-950 flex items-center justify-center">
       <div className="max-w-screen-desktop mx-auto grid grid-cols-1 tablet:grid-cols-2 gap-10 p-10 w-full">
         <div className="flex items-center justify-center tablet:justify-start">
           <Image

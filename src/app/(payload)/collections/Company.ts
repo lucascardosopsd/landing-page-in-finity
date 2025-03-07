@@ -43,13 +43,6 @@ export const Companies: CollectionConfig = {
       label: "CNPJ",
       type: "text",
       required: true,
-      validate: (text: any) =>
-        text
-          .regex(/^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/, {
-            name: "CNPJ",
-            invert: false,
-          })
-          .error("CNPJ inválido"),
     },
     {
       name: "address",

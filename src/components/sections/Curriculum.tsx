@@ -10,6 +10,7 @@ const CurriculumSection = () => {
         <div className="flex flex-col items-center justify-center tablet:flex-row gap-2 p-10 w-full">
           <div className="flex flex-col flex-1 items-center justify-center">
             <Image
+              priority
               alt="curriculum"
               src="/paper.png"
               height={1000}

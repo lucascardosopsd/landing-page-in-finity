@@ -1,6 +1,6 @@
 import { payload } from "@/lib/payload";
 
-type JobProps = {
+export type JobProps = {
   id: string;
   role: string;
   company: {
