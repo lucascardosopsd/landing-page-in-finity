@@ -1,4 +1,8 @@
 "use client";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dbe53bcf03dfd329612a9c18f55685367b323f8
 import { Controller, useForm } from "react-hook-form";
 import {
   Form,
@@ -19,9 +23,14 @@ import {
 } from "../ui/select";
 import { z } from "zod";
 import { jobValidator } from "@/validators/job";
+<<<<<<< HEAD
 import { Button } from "../ui/button";
 import { toast } from "react-toastify";
 import { UploadButton } from "@/utils/uploadthing";
+=======
+import { Label } from "../ui/label";
+import { Button } from "../ui/button";
+>>>>>>> 3dbe53bcf03dfd329612a9c18f55685367b323f8
 
 const JobForm = () => {
   const form = useForm({
@@ -45,6 +54,7 @@ const JobForm = () => {
     },
   ];
 
+<<<<<<< HEAD
   const handleSubmit = (data: z.infer<typeof jobValidator>) => {
     try {
     } catch (error) {
@@ -59,6 +69,13 @@ const JobForm = () => {
         onSubmit={form.handleSubmit(handleSubmit)}
         className="space-y-4 w-full"
       >
+=======
+  const handleSubmit = (data: z.infer<typeof jobValidator>) => {};
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+>>>>>>> 3dbe53bcf03dfd329612a9c18f55685367b323f8
         <div>
           <p className="text-xl">Banco de Talentos</p>
 
@@ -148,6 +165,7 @@ const JobForm = () => {
           )}
         />
 
+<<<<<<< HEAD
         <UploadButton
           endpoint="imageUploader"
           onClientUploadComplete={(res) => {
@@ -157,6 +175,24 @@ const JobForm = () => {
           onUploadError={(error: Error) => {
             toast.error("Ocorreu um erro ao enviar seu currículo para núvem.");
           }}
+=======
+        <FormField
+          name="file"
+          control={form.control}
+          render={() => (
+            <FormItem>
+              <FormLabel>Currículo</FormLabel>
+              <div className="relative">
+                <Label htmlFor="file" />
+                <FormControl>
+                  <Input id="file" type="file" />
+                </FormControl>
+              </div>
+
+              <FormMessage />
+            </FormItem>
+          )}
+>>>>>>> 3dbe53bcf03dfd329612a9c18f55685367b323f8
         />
 
         <Button className="bg-red-500 w-full">Enviar</Button>

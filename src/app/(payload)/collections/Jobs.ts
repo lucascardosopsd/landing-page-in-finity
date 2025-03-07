@@ -15,6 +15,7 @@ export const Jobs: CollectionConfig = {
     },
     {
       name: "company",
+<<<<<<< HEAD
       label: "Empresa",
       type: "relationship",
       relationTo: "companies",
@@ -25,6 +26,10 @@ export const Jobs: CollectionConfig = {
           },
         },
       },
+=======
+      type: "relationship",
+      relationTo: "companies",
+>>>>>>> 3dbe53bcf03dfd329612a9c18f55685367b323f8
     },
 
     {
